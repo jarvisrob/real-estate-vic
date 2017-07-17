@@ -1,10 +1,5 @@
 
-library(ggplot2)
-library(tibble)
-library(tidyr)
-library(readr)
-library(purr)
-library(dplyr)
+library(tidyverse)
 
 
 setwd("c:/lab/real-estate-vic")
@@ -138,6 +133,7 @@ ggplot(houses, aes(zlnPrice)) + geom_density()
 
 ## Ready for machine learning
 glimpse(houses)
+write.csv(houses, "houses.csv", quote = FALSE, row.names = FALSE)
 ## Machine learing time!
 # In machine learning, group non houses or townhouses into "house-other"!!!
 
