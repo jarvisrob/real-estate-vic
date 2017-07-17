@@ -108,7 +108,13 @@ houses <- houses %>% mutate(Dash = grepl("-", Address))
 head(filter(houses, Slash | Ampersand | Dash), 40)
 
 # Explore new features for predictive power
+houses <- houses %>% mutate(CharInd = ifelse(Slash, "Slash", ifelse(Ampersand, "Ampersand", ifelse(Dash, "Dash", "None"))))
+char.ind <- houses %>% group_by(CharInd) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
+char.ind
+ggplot(houses, aes(CharInd, Price)) + geom_boxplot()
 
+# Exclude Ampersands -- Tend to indicate multiple houses sold at once
+houses <- houses %>% filter(!Ampersand)
 
 # Explore Price
 ggplot(houses, aes(Price)) + geom_histogram(binwidth = 100000)
