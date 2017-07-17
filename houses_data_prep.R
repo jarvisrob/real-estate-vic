@@ -57,6 +57,22 @@ lin.mod.bedrooms <- lm(Price ~ NumberOfBedrooms, houses)
 summary(lin.mod.bedrooms)
 ggplot(houses, aes(NumberOfBedrooms, Price)) + geom_point() + geom_smooth(method = lm)
 
+# Feature engineering: Adding "/", "&" and "-" detection
+houses <- houses %>% mutate(Slash = grepl("/", Address))
+houses <- houses %>% mutate(Ampersand = grepl("&", Address))
+houses <- houses %>% mutate(Dash = grepl("-", Address))
+head(filter(houses, Slash | Ampersand | Dash), 40)
+
+# Explore new features for predictive power
+houses <- houses %>% mutate(CharInd = ifelse(Ampersand, "Ampersand", ifelse(Slash, "Slash", ifelse(Dash, "Dash", "None"))))
+char.ind <- houses %>% group_by(CharInd) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
+colnames(char.ind) <- c("CharInd", "nSales", "minPrice", "medianPrice", "maxPrice", "meanPrice", "sdPrice")
+char.ind
+ggplot(houses, aes(CharInd, Price)) + geom_boxplot()
+
+# Exclude Ampersands -- Tend to indicate multiple houses sold at once
+houses <- houses %>% filter(!Ampersand)
+
 # Explore suburbs
 suburbs <- houses %>% group_by(Suburb) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
 colnames(suburbs) <- c("Suburb", "nSales", "minPrice", "medianPrice", "maxPrice", "meanPrice", "sdPrice")
@@ -78,7 +94,7 @@ glimpse(houses)
 # Explore type
 types <- houses %>% group_by(Type) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
 colnames(types) <- c("Type", "nSales", "minPrice", "medianPrice", "maxPrice", "meanPrice", "sdPrice")
-types # In machine learning, group non houses or townhouses into "house-other"!!!
+types
 ggplot(houses, aes(Type, Price)) + geom_boxplot()
 
 # Explore sale year
@@ -100,22 +116,6 @@ houses <- houses %>% filter(DaysRel > -800)
 lin.mod.time <- lm(Price ~ DaysRel, houses)
 summary(lin.mod.time)
 ggplot(houses, aes(DaysRel, Price)) + geom_point() + geom_smooth(method = lm)
-
-# Feature engineering: Adding "/", "&" and "-" detection
-houses <- houses %>% mutate(Slash = grepl("/", Address))
-houses <- houses %>% mutate(Ampersand = grepl("&", Address))
-houses <- houses %>% mutate(Dash = grepl("-", Address))
-head(filter(houses, Slash | Ampersand | Dash), 40)
-
-# Explore new features for predictive power
-houses <- houses %>% mutate(CharInd = ifelse(Ampersand, "Ampersand", ifelse(Slash, "Slash", ifelse(Dash, "Dash", "None"))))
-char.ind <- houses %>% group_by(CharInd) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
-colnames(char.ind) <- c("CharInd", "nSales", "minPrice", "medianPrice", "maxPrice", "meanPrice", "sdPrice")
-char.ind
-ggplot(houses, aes(CharInd, Price)) + geom_boxplot()
-
-# Exclude Ampersands -- Tend to indicate multiple houses sold at once
-houses <- houses %>% filter(!Ampersand)
 
 # Explore Price
 ggplot(houses, aes(Price)) + geom_histogram(binwidth = 100000)
@@ -139,6 +139,7 @@ ggplot(houses, aes(zlnPrice)) + geom_density()
 ## Ready for machine learning
 glimpse(houses)
 ## Machine learing time!
+# In machine learning, group non houses or townhouses into "house-other"!!!
 
 # Code for denormalising
 houses <- houses %>% mutate(ScoredPrice = exp(Scored.Label * lnPrice.sd + lnPrice.mean))
