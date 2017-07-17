@@ -108,7 +108,7 @@ houses <- houses %>% mutate(Dash = grepl("-", Address))
 head(filter(houses, Slash | Ampersand | Dash), 40)
 
 # Explore new features for predictive power
-houses <- houses %>% mutate(CharInd = ifelse(Slash, "Slash", ifelse(Ampersand, "Ampersand", ifelse(Dash, "Dash", "None"))))
+houses <- houses %>% mutate(CharInd = ifelse(Ampersand, "Ampersand", ifelse(Slash, "Slash", ifelse(Dash, "Dash", "None"))))
 char.ind <- houses %>% group_by(CharInd) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
 colnames(char.ind) <- c("CharInd", "nSales", "minPrice", "medianPrice", "maxPrice", "meanPrice", "sdPrice")
 char.ind
