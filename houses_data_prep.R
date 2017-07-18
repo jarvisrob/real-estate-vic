@@ -1,19 +1,22 @@
 
+# Load packages
 library(tidyverse)
 
-
+# Set working dir
 setwd("c:/lab/real-estate-vic")
+
+# Import dataset
 reiv.raw <- read.csv("all_records.csv", header = TRUE, stringsAsFactors = FALSE)
 
 # Explore data
 glimpse(reiv.raw)
 head(reiv.raw, 20)
 
-# Drop Agent and Website -- Assume these have no predictive power
+# Drop Agent and Website fields -- Assume these have no predictive power
 reiv <- reiv.raw %>% dplyr::select(-Agent, -Website)
 head(reiv, 20)
 
-# Unwanted data
+# Note that there is a whole lot of unwanted data -- Wrong reality type and reality that hasn't even sold
 unique(reiv$Type)
 unique(reiv$Outcome)
 
@@ -24,7 +27,7 @@ houses <- unique(houses)
 glimpse(houses)
 head(houses, 100)
 
-# Explore price
+# Explore price -- Note the large spike at zero price (undiscloseds)
 ggplot(houses, aes(Price)) + geom_histogram(binwidth = 100000)
 
 # Remove undisclosed prices
@@ -34,14 +37,16 @@ head(houses, 100)
 ggplot(houses, aes(Price)) + geom_histogram(binwidth = 100000)
 
 # Explore bedrooms
+lin.mod.bedrooms <- lm(Price ~ NumberOfBedrooms, houses)
+summary(lin.mod.bedrooms)
+ggplot(houses, aes(NumberOfBedrooms, Price)) + geom_point() + geom_smooth(method = lm)
+
+# Note there are entries with zero bedrooms -- Suggest this is data that was not provided
 ggplot(houses, aes(NumberOfBedrooms)) + geom_bar()
 
 # Remove entries with zero bedrooms
 houses <- houses %>% filter(NumberOfBedrooms != 0)
 glimpse(houses)
-ggplot(houses, aes(NumberOfBedrooms)) + geom_bar()
-
-# Explore bedrooms
 lin.mod.bedrooms <- lm(Price ~ NumberOfBedrooms, houses)
 summary(lin.mod.bedrooms)
 ggplot(houses, aes(NumberOfBedrooms, Price)) + geom_point() + geom_smooth(method = lm)
@@ -65,8 +70,10 @@ colnames(char.ind) <- c("CharInd", "nSales", "minPrice", "medianPrice", "maxPric
 char.ind
 ggplot(houses, aes(CharInd, Price)) + geom_boxplot()
 
-# Exclude Ampersands -- Tend to indicate multiple houses sold at once
+# Exclude Ampersands and drop associated field -- Tend to indicate multiple houses sold at once
 houses <- houses %>% filter(!Ampersand)
+houses <- houses %>% dplyr::select(-Ampersand)
+ggplot(houses, aes(CharInd, Price)) + geom_boxplot()
 
 # Explore suburbs
 suburbs <- houses %>% group_by(Suburb) %>% summarize(n(), min(Price), median(Price), max(Price), mean(Price), sd(Price))
@@ -95,9 +102,9 @@ ggplot(houses, aes(Type, Price)) + geom_boxplot()
 # Explore sale year
 ggplot(houses, aes(factor(Year), Price)) + geom_boxplot()
 
-# Convert Year, Month, Day to DateSold and DaysRel field
+# Feature engineering: Convert Year, Month, Day to DateSold and DaysRel field
 houses <- houses %>% mutate(DateSold = as.Date(paste0(Year, "-", Month, "-", Day)))
-houses <- houses %>% mutate(DaysRel = as.numeric(DateSold - Sys.Date()))
+houses <- houses %>% mutate(DaysRel = as.numeric(DateSold - as.Date("2017-07-18")))
 head(houses, 10)
 tail(houses, 10)
 
@@ -129,13 +136,19 @@ houses <- houses %>% mutate(zlnPrice = (lnPrice - lnPrice.mean) / lnPrice.sd)
 head(houses, 20)
 ggplot(houses, aes(zlnPrice)) + geom_density()
 
-# Consider removing fields that won't be supplied by user app!!!
+
+# Remove fields that don't want in AML dataset
+glimpse(houses)
+houses <- houses %>% dplyr::select(-Year, -Month, -Day, -Slash, -Dash, -CharInd, -DaysRel, -lnPrice)
+# Will need to regenerate Slash, Dash and DaysRel in AML
+glimpse(houses)
+
 
 ## Ready for machine learning
-glimpse(houses)
 write.csv(houses, "houses.csv", quote = FALSE, row.names = FALSE)
 ## Machine learing time!
 # In machine learning, group non houses or townhouses into "house-other"!!!
+
 
 # Code for denormalising
 houses <- houses %>% mutate(ScoredPrice = exp(Scored.Label * lnPrice.sd + lnPrice.mean))
