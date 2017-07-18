@@ -1,6 +1,7 @@
 
 # Load packages
 library(tidyverse)
+library(MASS)
 
 # Set working dir
 setwd("c:/lab/real-estate-vic")
@@ -61,7 +62,7 @@ ggplot(houses, aes(NumberOfBedrooms, Price)) + geom_point() + geom_smooth(method
 houses <- houses %>% mutate(Slash = grepl("/", Address))
 houses <- houses %>% mutate(Ampersand = grepl("&", Address))
 houses <- houses %>% mutate(Dash = grepl("-", Address))
-head(filter(houses, Slash | Ampersand | Dash), 40)
+head(filter(houses, Slash | Ampersand | Dash) %>% dplyr::select(Suburb, Address, Type, Slash, Ampersand, Dash), 40)
 
 # Explore new features for predictive power
 houses <- houses %>% mutate(CharInd = ifelse(Ampersand, "Ampersand", ifelse(Slash, "Slash", ifelse(Dash, "Dash", "None"))))
@@ -105,8 +106,8 @@ ggplot(houses, aes(factor(Year), Price)) + geom_boxplot()
 # Feature engineering: Convert Year, Month, Day to DateSold and DaysRel field
 houses <- houses %>% mutate(DateSold = as.Date(paste0(Year, "-", Month, "-", Day)))
 houses <- houses %>% mutate(DaysRel = as.numeric(DateSold - as.Date("2017-07-18")))
-head(houses, 10)
-tail(houses, 10)
+head(houses %>% dplyr::select(Suburb, Address, Type, DateSold, DaysRel), 10)
+tail(houses %>% dplyr::select(Suburb, Address, Type, DateSold, DaysRel), 10)
 
 # Linear model of Price as function of DaysRel
 lin.mod.time <- lm(Price ~ DaysRel, houses)
@@ -125,7 +126,6 @@ ggplot(houses, aes(Price)) + geom_histogram(binwidth = 100000)
 # Price potentially log-normal
 houses <- houses %>% mutate(lnPrice = log(Price))
 ggplot(houses, aes(lnPrice)) + geom_histogram(bins = 50)
-library(MASS)
 distrib <- fitdistr(houses$lnPrice, "normal")
 distrib
 lnPrice.mean <- distrib$estimate[["mean"]]
