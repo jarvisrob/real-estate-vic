@@ -78,15 +78,18 @@ class Realty:
 
 
 def parse_suburb_name(suburb_element):
-    name_raw = suburb_element.div.h2.string
-    return name_raw.partition(' Sales &')[0]
+#    name_raw = suburb_element.div.h2.string
+#    return name_raw.partition(' Sales &')[0]
+    return suburb_element["data-id"]
 
 
 def find_realty_body(suburb_element):
-    candidate = suburb_element.next_sibling
-    while candidate == '\n':
-        candidate = candidate.next_sibling
-    return candidate
+    # next_sibling is often the \n character, so keep going until find the tag
+#    candidate = suburb_element.next_sibling
+#    while candidate == '\n':
+#        candidate = candidate.next_sibling
+#    return candidate.tbody
+    return suburb_element.table.tbody
 
 
 def check_is_more_results(realty_body):
@@ -99,10 +102,10 @@ def check_is_more_results(realty_body):
 
 
 def find_realty_rows(realty_body):
-    realty_table_element = realty_body.find_all('table')[0]
-    rows = realty_table_element.find_all('tr')
-    rows.pop(0)  # remove heading row
-    return rows
+#    realty_table_element = realty_body.find_all('table')[0]
+#    rows = realty_table_element.find_all('tr')
+#    rows.pop(0)  # remove heading row
+    return realty_body.find_all("tr")
 
 
 def find_realty_body_on_more_page(url, suburb_name):
@@ -130,18 +133,20 @@ def parse_realty_data(data):
     td_weblink = data[0].find_all('a')
     if not td_weblink:
         weblink = ''
-        td_addr = data[0].string.strip()
+        td_addr = data[0].span.string.strip()
     else:
         weblink = td_weblink[0]['href']
-        td_addr = td_weblink[0].string.strip()
+        td_addr = td_weblink[0].span.string.strip()
     addr = ' '.join(td_addr.split())
 
     # Next <td> is number of bedrooms
-    td_br = data[1].string.strip()
-    if td_br == '-':
+    td_br = data[1].string
+    if not td_br:
+        br = 0
+    elif td_br == '-' or td_br == "":
         br = 0
     else:
-        br = int(td_br)
+        br = int(td_br.strip())
 
     # Next <td> is price
     td_price = data[2].string.strip()
@@ -195,7 +200,7 @@ def main():
         print('Soup collected for', letter, 'at', url)
 
         # Locate the suburb
-        suburb_soup = soup.find_all('div', 'pd-content-heading-dark')
+        suburb_soup = soup.find_all('div', "suburb-list-item show-list")
 
         # Commence parsing
         print('Parsing commenced ...')
@@ -207,18 +212,18 @@ def main():
 
             # Find the body of the realty table for this suburb element and check for 'View more results' button
             realty_body = find_realty_body(suburb_element)
-            [ismore, relurl] = check_is_more_results(realty_body)
+#            [ismore, relurl] = check_is_more_results(realty_body)
 
             # If there are more results, then obtain realty_body from THAT page instead
-            if ismore:
-                realty_body = find_realty_body_on_more_page(baseurl + relurl, suburb.name)
+#            if ismore:
+#                realty_body = find_realty_body_on_more_page(baseurl + relurl, suburb.name)
 
             # Parse out the rows of realty data
             rows = find_realty_rows(realty_body)
 
             # For each row, parse out the realties and append to suburb
             for row in rows:
-                realty_data = row.find_all('td')
+                realty_data = row.find_all("td")
                 [addr, br, price, classification, method_sale, year_sale, month_sale, day_sale, agent, weblink] \
                     = parse_realty_data(realty_data)
                 realty = Realty(addr, br, price, classification, method_sale, year_sale, month_sale, day_sale, agent,
