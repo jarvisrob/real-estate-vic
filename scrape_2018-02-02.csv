@@ -55,8 +55,8 @@ Ascot Vale,7/115-117 The Parade,apartment,2,0,2017,12,16,passed in vendor bid,Bi
 Ashwood,54 Cassinia Av,house,2,1200000.0,2017,12,16,passed in vendor bid,Jellis Craig,https://www.realestateview.com.au/real-estate/54-cassinia-avenue-ashwood-vic/property-details-sold-residential-11486393/
 Ashwood,8 Condah Ct,house,3,1183000.0,2017,12,16,auction sale,Ray White - Mount Waverley,
 Ashwood,1/39 Lavidge Rd,townhouse,4,1350000.0,2017,12,16,passed in at auction,Buxton Ashburton,https://www.realestateview.com.au/real-estate/1-39-lavidge-road-ashwood-vic/property-details-buy-residential-11475583/
-Ashwood,2/135 High Street Rd,townhouse,3,0,2017,12,16,passed in vendor bid,Buxton Ashburton,https://www.realestateview.com.au/real-estate/2-135-high-street-road-ashwood-vic/property-details-buy-residential-11495622/
-Ashwood,2/25 Mulgrave St,townhouse,3,0,2017,12,16,passed in at auction,Buxton Ashburton,https://www.realestateview.com.au/real-estate/2-25-mulgrave-street-ashwood-vic/property-details-buy-residential-11475813/
+Ashwood,2/135 High Street Rd,townhouse,3,0,2017,12,16,passed in vendor bid,Buxton Ashburton,https://www.realestateview.com.au/real-estate/2-135-high-street-road-ashwood-vic/property-details-sold-residential-11495622/
+Ashwood,2/25 Mulgrave St,townhouse,3,0,2017,12,16,passed in at auction,Buxton Ashburton,
 Aspendale,34 Albany Cr,house,3,1000000.0,2017,12,16,auction sale,Buxton,https://www.realestateview.com.au/real-estate/34-albany-crescent-aspendale-vic/property-details-sold-residential-11492991/
 Aspendale,48 Iluka Av,house,3,830000.0,2017,12,11,sold before auction,Barry Plant,
 Aspendale,185 Nepean Hwy,house,5,0,2017,12,12,private sale,Buxton,https://www.realestateview.com.au/real-estate/185-nepean-highway-aspendale-vic/property-details-sold-residential-11460754/
@@ -150,7 +150,7 @@ Bentleigh,5 Lydia St,house,0,1840000.0,2017,12,10,private sale,Jellis Craig,
 Bentleigh,7A Mortimore St,townhouse,3,0,2017,12,17,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/7a-mortimore-street-bentleigh-vic/property-details-sold-residential-11488716/
 Bentleigh,8/2 Malane St,apartment,2,0,2017,11,28,private sale,Marshall White & Co,
 Bentleigh East,147B Bignell Rd,townhouse,4,1389000.0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/147b-bignell-road-bentleigh-east-vic/property-details-sold-residential-11234382/
-Bentleigh East,72 Blamey St,house,3,1220000.0,2017,12,16,passed in at auction,Buxton,https://www.realestateview.com.au/real-estate/72-blamey-street-bentleigh-east-vic/property-details-buy-residential-11485534/
+Bentleigh East,72 Blamey St,house,3,1220000.0,2017,12,16,passed in at auction,Buxton,https://www.realestateview.com.au/real-estate/72-blamey-street-bentleigh-east-vic/property-details-sold-residential-11485534/
 Bentleigh East,44 East Boundary Rd,house,4,1100000.0,2017,12,16,passed in vendor bid,Woodards,https://www.realestateview.com.au/real-estate/44-east-boundary-road-bentleigh-east-vic/property-details-buy-residential-11480388/
 Bentleigh East,2/45 East Boundary Rd,unit,2,663000.0,2017,12,16,auction sale,Buxton,https://www.realestateview.com.au/real-estate/2-45-east-boundary-road-bentleigh-east-vic/property-details-sold-residential-11491586/
 Bentleigh East,33 Gladwyn Av,house,3,1655000.0,2017,12,16,auction sale,Ray White Carnegie,https://www.realestateview.com.au/real-estate/33-gladwyn-avenue-bentleigh-east-vic/property-details-sold-residential-11482717/
@@ -220,7 +220,7 @@ Box Hill South,1/240 Elgar Rd,unit,3,850000.0,2017,12,13,passed in vendor bid,Ra
 Box Hill South,2 Gwenda St,house,4,0,2017,12,8,private sale,Fletchers,https://www.realestateview.com.au/real-estate/2-gwenda-street-box-hill-south-vic/property-details-sold-residential-11416912/
 Braybrook,1 Myamyn St,townhouse,3,850000.0,2017,12,16,auction sale,Douglas Kay Sunshine,
 Braybrook,1/31 Vine St,townhouse,3,600000.0,2017,12,16,passed in vendor bid,Barry Plant,https://www.realestateview.com.au/real-estate/1-31-vine-street-braybrook-vic/property-details-sold-residential-11485301/
-Brighton,12 Cole St,house,4,5500000.0,2017,12,16,passed in vendor bid,Marshall White & Co,
+Brighton,12 Cole St,house,4,5500000.0,2017,12,16,passed in vendor bid,Marshall White & Co,https://www.realestateview.com.au/real-estate/12-cole-street-brighton-vic/property-details-buy-residential-11480021/
 Brighton,126 Head St,house,2,1400000.0,2017,12,16,auction sale,hockingstuart,https://www.realestateview.com.au/real-estate/126-head-street-brighton-vic/property-details-sold-residential-11490234/
 Brighton,53 Lynch Cr,house,3,2350000.0,2017,12,16,passed in vendor bid,Hodges,
 Brighton,40 Whyte St,house,3,1900000.0,2017,12,16,passed in at auction,Nick Johnstone Real Estate,https://www.realestateview.com.au/real-estate/40-whyte-street-brighton-vic/property-details-sold-residential-11485651/
@@ -281,7 +281,7 @@ Brunswick West,6 Shamrock St,house,4,0,2017,12,16,passed in at auction,Barry Pla
 Brunswick West,53 Pearson St,house,4,0,2017,12,13,private sale,Jellis Craig,https://www.realestateview.com.au/real-estate/53-pearson-street-brunswick-west-vic/property-details-sold-residential-11467075/
 Bulleen,134 Manningham Rd,house,3,1182000.0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/134-manningham-road-bulleen-vic/property-details-sold-residential-11480404/
 Bulleen,59 Robert St,house,4,0,2017,12,16,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/59-robert-street-bulleen-vic/property-details-sold-residential-11486597/
-Bulleen,2/82 Willow Bnd,unit,3,0,2017,12,16,passed in at auction,Philip Webb,https://www.realestateview.com.au/real-estate/2-82-willow-bend-bulleen-vic/property-details-buy-residential-11461337/
+Bulleen,2/82 Willow Bnd,unit,3,0,2017,12,16,passed in at auction,Philip Webb,https://www.realestateview.com.au/real-estate/2-82-willow-bend-bulleen-vic/property-details-sold-residential-11461337/
 Bundoora,17 Milton Pde,house,4,870000.0,2017,12,16,auction sale,Stockdale & Leggo Bundoora,https://www.realestateview.com.au/real-estate/17-milton-parade-bundoora-vic/property-details-sold-residential-11477587/
 Bundoora,552 Morwell Av,house,3,850000.0,2017,12,5,private sale,Barry Plant Bundoora,https://www.realestateview.com.au/real-estate/552-morwell-avenue-bundoora-vic/property-details-sold-residential-11350139/
 Bundoora,77 Cameron Pde,house,3,0,2017,12,16,passed in at auction,Barry Plant Bundoora,https://www.realestateview.com.au/real-estate/77-cameron-parade-bundoora-vic/property-details-buy-residential-11475225/
@@ -541,7 +541,7 @@ Dingley Village,2/302 Spring Rd,house,3,775000.0,2017,12,16,auction sale,Ray Whi
 Dingley Village,2/7 Campbell Gr,house,2,715000.0,2017,12,4,private sale,Barry Plant,
 Dingley Village,61-63 Mcclure Rd,house,5,0,2017,12,16,passed in at auction,Ray White Dingley Village,
 Docklands,704/8 Waterview Wlk,apartment,2,0,2017,12,6,private sale,Lucas Real Estate,
-Doncaster,3/40 Finlayson St,apartment,0,850000.0,2017,12,16,passed in at auction,Barry Plant,https://www.realestateview.com.au/real-estate/3-40-finlayson-street-doncaster-vic/property-details-buy-residential-11476293/
+Doncaster,3/40 Finlayson St,apartment,0,850000.0,2017,12,16,passed in at auction,Barry Plant,https://www.realestateview.com.au/real-estate/3-40-finlayson-street-doncaster-vic/property-details-sold-residential-11476293/
 Doncaster,56 Victoria St,house,3,1150000.0,2017,12,16,passed in at auction,hockingstuart,
 Doncaster,907/101 Tram Rd,apartment,2,440000.0,2017,12,13,private sale,hockingstuart,
 Doncaster,2/13 High St,townhouse,0,831000.0,2017,12,12,private sale,Barry Plant,https://www.realestateview.com.au/real-estate/2-13-high-street-doncaster-vic/property-details-sold-residential-11492307/
@@ -561,7 +561,7 @@ Doncaster East,1 Iris Ct,house,5,1950000.0,2017,12,16,auction sale,Barry Plant,h
 Doncaster East,12 Worthing Av,house,4,1420000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/12-worthing-avenue-doncaster-east-vic/property-details-sold-residential-11486589/
 Doncaster East,1/30 Franklin Rd,house,3,1130000.0,2017,12,12,private sale,Jellis Craig,https://www.realestateview.com.au/real-estate/1-30-franklin-road-doncaster-east-vic/property-details-sold-residential-11437606/
 Doncaster East,58 Gedye St,house,4,1150000.0,2017,12,12,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/58-gedye-street-doncaster-east-vic/property-details-buy-residential-11438598/
-Doncaster East,3 Refuge Cl,house,4,1275000.0,2017,12,12,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/3-refuge-close-doncaster-east-vic/property-details-buy-residential-11450086/
+Doncaster East,3 Refuge Cl,house,4,1275000.0,2017,12,12,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/3-refuge-close-doncaster-east-vic/property-details-sold-residential-11450086/
 Doncaster East,34 Greendale Rd,house,5,0,2017,12,16,auction sale,Parkes Property,https://www.realestateview.com.au/real-estate/34-greendale-road-doncaster-east-vic/property-details-sold-residential-11445421/
 Doncaster East,3/37 Greendale Rd,unit,3,0,2017,12,16,passed in at auction,Philip Webb,https://www.realestateview.com.au/real-estate/3-37-greendale-road-doncaster-east-vic/property-details-buy-residential-11485918/
 Doncaster East,9 Halsbury Cl,house,3,0,2017,12,16,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/9-halsbury-close-doncaster-east-vic/property-details-buy-residential-11479717/
@@ -656,7 +656,7 @@ Epping,73 Calendula Cirt,house,3,0,2017,12,16,passed in at auction,Harcourts Rat
 Epping,23 Nesting Ct,house,5,0,2017,12,13,passed in at auction,Harcourts Rata & Co,
 Epsom,5 Glenwill Dr,house,3,0,2017,12,14,passed in at auction,Ray White Bendigo,https://www.realestateview.com.au/real-estate/5-glenwill-drive-epsom-vic/property-details-buy-residential-11453823/
 Epsom,107 Goynes Rd,house,3,0,2017,12,14,passed in at auction,Ray White Bendigo,https://www.realestateview.com.au/real-estate/107-goynes-road-epsom-vic/property-details-buy-residential-11453849/
-Essendon,4/142 Cooper St,townhouse,3,800000.0,2017,12,16,passed in vendor bid,Barry Plant,https://www.realestateview.com.au/real-estate/4-142-cooper-street-essendon-vic/property-details-buy-residential-11481157/
+Essendon,4/142 Cooper St,townhouse,3,800000.0,2017,12,16,passed in vendor bid,Barry Plant,https://www.realestateview.com.au/real-estate/4-142-cooper-street-essendon-vic/property-details-sold-residential-11481157/
 Essendon,2/5 Kalimna St,unit,2,768000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/2-5-kalimna-street-essendon-vic/property-details-sold-residential-11503445/
 Essendon,14 Marco Polo St,house,3,1300000.0,2017,12,16,passed in vendor bid,Hodges,https://www.realestateview.com.au/real-estate/14-marco-polo-street-essendon-vic/property-details-buy-residential-11477653/
 Essendon,46 Salmon Av,house,5,2220000.0,2017,12,16,auction sale,Nelson Alexander,https://www.realestateview.com.au/real-estate/46-salmon-avenue-essendon-vic/property-details-sold-residential-11474999/
@@ -695,7 +695,7 @@ Flemington,24 Princes St,house,4,0,2017,12,16,passed in at auction,Ray white Yar
 Flora Hill,213 Neale St,house,3,0,2017,11,22,private sale,Barry Plant,https://www.realestateview.com.au/real-estate/213-neale-street-flora-hill-vic/property-details-sold-residential-11426841/
 Footscray,83 Eleanor St,apartment,1,425000.0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/83-eleanor-street-footscray-vic/property-details-sold-residential-11480511/
 Footscray,16 Nicholson St,house,6,1527000.0,2017,12,16,auction sale,Nelson Alexander,https://www.realestateview.com.au/real-estate/16-nicholson-street-footscray-vic/property-details-sold-residential-11486388/
-Footscray,17 Steet St,house,4,950000.0,2017,12,16,passed in vendor bid,Biggin & Scott,https://www.realestateview.com.au/real-estate/17-steet-street-footscray-vic/property-details-buy-residential-11477828/
+Footscray,17 Steet St,house,4,950000.0,2017,12,16,passed in vendor bid,Biggin & Scott,
 Footscray,48B Wolverhampton St,townhouse,3,760000.0,2017,12,16,auction sale,Sweeney,
 Footscray,10/20 French St,apartment,3,517000.0,2017,12,13,sold before auction,Brad Teal,https://www.realestateview.com.au/real-estate/10-20-french-street-footscray-vic/property-details-sold-residential-11478222/
 Footscray,36 Southampton St,house,2,0,2017,12,16,passed in vendor bid,Harcourts Footscray,
@@ -789,7 +789,7 @@ Glenroy,70 Beatty Av,unit,2,530000.0,2017,12,16,auction sale,Stockdale & Leggo G
 Glenroy,43 Bindi St,house,2,637000.0,2017,12,16,auction sale,Brad Teal,https://www.realestateview.com.au/real-estate/43-bindi-street-glenroy-vic/property-details-sold-residential-11461843/
 Glenroy,107 Daley St,house,3,682000.0,2017,12,16,passed in at auction,Ray White Glenroy,
 Glenroy,181 Daley St,house,2,628000.0,2017,12,16,auction sale,Ray White Glenroy,
-Glenroy,36 Gladstone Pde,house,2,1245000.0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/36-gladstone-parade-glenroy-vic/property-details-buy-residential-11485117/
+Glenroy,36 Gladstone Pde,house,2,1245000.0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/36-gladstone-parade-glenroy-vic/property-details-sold-residential-11485414/
 Glenroy,1/120 Loongana Av,villa,3,595000.0,2017,12,16,auction sale,Claudio + Marwan Residential - Eview Group,https://www.realestateview.com.au/real-estate/1-120-loongana-avenue-glenroy-vic/property-details-sold-residential-11479984/
 Glenroy,81 Loongana Av,house,4,1035000.0,2017,12,16,auction sale,Claudio + Marwan Residential - Eview Group,https://www.realestateview.com.au/real-estate/81-loongana-avenue-glenroy-vic/property-details-sold-residential-11483952/
 Glenroy,54 Morley St,house,3,885000.0,2017,12,16,auction sale,Nelson Alexander,https://www.realestateview.com.au/real-estate/54-morley-street-glenroy-vic/property-details-sold-residential-11484878/
@@ -904,12 +904,12 @@ Heidelberg West,4/9 Exeter Ct,unit,2,471000.0,2017,12,12,sold before auction,Mil
 Herne Hill,2/6-8 Stafford St,unit,1,230000.0,2017,12,15,private sale,Buxton,https://www.realestateview.com.au/real-estate/2-6-8-stafford-street-herne-hill-vic/property-details-sold-residential-11459110/
 Herne Hill,2/73 Mccurdy Rd,house,2,364000.0,2017,12,14,private sale,Hodges,
 Hesket,298 Straws La,house,5,1200000.0,2017,11,29,private sale,R T Edgar,
-Highett,2B Albert St,townhouse,4,1450000.0,2017,12,16,passed in vendor bid,Branon Real Estate Pty Ltd,https://www.realestateview.com.au/real-estate/2b-albert-street-highett-vic/property-details-buy-residential-11485659/
+Highett,2B Albert St,townhouse,4,1450000.0,2017,12,16,passed in vendor bid,Branon Real Estate Pty Ltd,https://www.realestateview.com.au/real-estate/2b-albert-street-highett-vic/property-details-sold-residential-11485659/
 Highett,25 Haynes St,house,3,1430000.0,2017,12,16,auction sale,Hodges,https://www.realestateview.com.au/real-estate/25-haynes-street-highett-vic/property-details-sold-residential-11483183/
 Highett,229/286 Highett Rd,apartment,2,590000.0,2017,12,16,passed in vendor bid,Wilson,https://www.realestateview.com.au/real-estate/229-286-highett-road-highett-vic/property-details-buy-residential-11497999/
 Highett,2/3 Regworth Ct,townhouse,2,855000.0,2017,12,9,private sale,Buxton,https://www.realestateview.com.au/real-estate/2-3-regworth-court-highett-vic/property-details-sold-residential-11485882/
 Highett,149/75 Graham Rd,apartment,2,575000.0,2017,12,7,private sale,Buxton,https://www.realestateview.com.au/real-estate/149-75-graham-road-highett-vic/property-details-sold-residential-11358623/
-Highett,2/86 Turner Rd,townhouse,4,0,2017,12,17,passed in vendor bid,Hodges,https://www.realestateview.com.au/real-estate/2-86-turner-road-highett-vic/property-details-buy-residential-11431149/
+Highett,2/86 Turner Rd,townhouse,4,0,2017,12,17,passed in vendor bid,Hodges,
 Highton,4 Elizabeth St,house,2,452500.0,2017,12,16,auction sale,McGrath,https://www.realestateview.com.au/real-estate/4-elizabeth-street-highton-vic/property-details-sold-residential-11475061/
 Highton,3 Lynch Ct,house,4,695000.0,2017,12,16,auction sale,Buxton,https://www.realestateview.com.au/real-estate/3-lynch-court-highton-vic/property-details-sold-residential-11487506/
 Highton,249 Mt Pleasant Rd,house,3,545000.0,2017,12,16,auction sale,Ray White Highton,https://www.realestateview.com.au/real-estate/249-mt-pleasant-road-highton-vic/property-details-sold-residential-11477977/
@@ -943,7 +943,7 @@ Hoppers Crossing,17 Yarrabee Dr,house,4,650000.0,2017,12,16,auction sale,Barry P
 Hoppers Crossing,32 Toulouse Cr,house,3,580000.0,2017,12,14,sold before auction,Greg Hocking Lawson Partners,
 Hoppers Crossing,1 Crowe St,house,3,525000.0,2017,12,9,private sale,Greg Hocking Lawson Partners,
 Hoppers Crossing,4/71 Sycamore St,townhouse,2,455000.0,2017,11,10,private sale,Barry Plant,https://www.realestateview.com.au/real-estate/4-71-sycamore-street-hoppers-crossing-vic/property-details-sold-residential-11401588/
-Hoppers Crossing,21 Casey Dr,house,3,0,2017,12,16,passed in vendor bid,Triwest RE - Professionals,https://www.realestateview.com.au/real-estate/21-casey-drive-hoppers-crossing-vic/property-details-buy-residential-11471752/
+Hoppers Crossing,21 Casey Dr,house,3,0,2017,12,16,passed in vendor bid,Triwest RE - Professionals,https://www.realestateview.com.au/real-estate/21-casey-drive-hoppers-crossing-vic/property-details-sold-residential-11471752/
 Hoppers Crossing,7 Cowderoy St,house,3,0,2017,12,16,passed in at auction,Ray White Point Cook,https://www.realestateview.com.au/real-estate/7-cowderoy-street-hoppers-crossing-vic/property-details-buy-residential-11487963/
 Hoppers Crossing,37 Huntingfield Dr,house,3,0,2017,12,16,passed in vendor bid,First National Westwood RE,https://www.realestateview.com.au/real-estate/37-huntingfield-drive-hoppers-crossing-vic/property-details-buy-residential-11490687/
 Horsham,112 Barnes Blvd,land,0,230000.0,2017,12,15,passed in at auction,PRD Nationwide Horsham,
@@ -952,7 +952,7 @@ Huntly,3 Counsel Rd,house,3,0,2017,12,14,passed in at auction,Ray White Bendigo,
 Hurstbridge,28-30 Batman Av,house,6,1135000.0,2017,11,28,private sale,Buckingham & Co,
 Ivanhoe,3/18 Belmont Rd,unit,3,1220000.0,2017,12,16,auction sale,Miles RE,https://www.realestateview.com.au/real-estate/3-18-belmont-road-ivanhoe-vic/property-details-sold-residential-11478074/
 Ivanhoe,29 Melcombe Rd,house,3,1395000.0,2017,12,16,auction sale,Miles RE,https://www.realestateview.com.au/real-estate/29-melcombe-road-ivanhoe-vic/property-details-sold-residential-11478100/
-Ivanhoe,10 Stanley St,house,3,1150000.0,2017,12,16,passed in vendor bid,Nelson Alexander,https://www.realestateview.com.au/real-estate/10-stanley-street-ivanhoe-vic/property-details-buy-residential-11488753/
+Ivanhoe,10 Stanley St,house,3,1150000.0,2017,12,16,passed in vendor bid,Nelson Alexander,https://www.realestateview.com.au/real-estate/10-stanley-street-ivanhoe-vic/property-details-sold-residential-11488753/
 Ivanhoe,1/20-22 Ivanhoe Pde,townhouse,2,975000.0,2017,12,13,private sale,Miles RE,https://www.realestateview.com.au/real-estate/1-20-22-ivanhoe-parade-ivanhoe-vic/property-details-sold-residential-11461589/
 Ivanhoe,2/28 Livingstone St,townhouse,2,726000.0,2017,12,12,private sale,Miles RE,https://www.realestateview.com.au/real-estate/2-28-livingstone-street-ivanhoe-vic/property-details-sold-residential-11482431/
 Ivanhoe,4/69 Marshall St,apartment,1,400000.0,2017,12,12,passed in at auction,Ray White Manningham,https://www.realestateview.com.au/real-estate/4-69-marshall-street-ivanhoe-vic/property-details-sold-residential-11444331/
@@ -985,7 +985,7 @@ Keilor East,7 Fawkner Cr,house,3,1135000.0,2017,12,5,private sale,Nelson Alexand
 Keilor East,11 Valley Lake Blvd,land,0,0,2017,12,16,passed in at auction,Jellis Craig,https://www.realestateview.com.au/real-estate/11-valley-lake-boulevard-keilor-east-vic/property-details-buy-residential-11496431/
 Keilor Lodge,3 Dana Ct,house,4,0,2017,12,16,auction sale,alexkarbon,
 Keilor Park,37 Spence St,house,3,801500.0,2017,12,16,auction sale,Ray White Taylors Lakes,
-Keilor Park,55 Spence St,house,5,550000.0,2017,12,16,passed in at auction,Nelson Alexander,https://www.realestateview.com.au/real-estate/55-spence-street-keilor-park-vic/property-details-buy-residential-11486296/
+Keilor Park,55 Spence St,house,5,550000.0,2017,12,16,passed in at auction,Nelson Alexander,https://www.realestateview.com.au/real-estate/55-spence-street-keilor-park-vic/property-details-sold-residential-11486296/
 Kensington,306/72 Altona St,apartment,2,520000.0,2017,12,11,sold before auction,Jellis Craig,https://www.realestateview.com.au/real-estate/306-72-altona-street-kensington-vic/property-details-sold-residential-11485702/
 Kensington,4/63 Eastwood St,apartment,1,305000.0,2017,12,6,sold before auction,Jellis Craig,https://www.realestateview.com.au/real-estate/4-63-eastwood-street-kensington-vic/property-details-sold-residential-11399142/
 Kensington,317/80 Ormond St,apartment,2,0,2017,12,16,passed in at auction,Nicholson RE Brunswick East,
@@ -1101,7 +1101,7 @@ Maffra,62 George St,house,4,0,2017,12,16,passed in at auction,Gippsland Real Est
 Maidstone,13/12 Crefden St,apartment,2,373500.0,2017,12,16,auction sale,Biggin & Scott,https://www.realestateview.com.au/real-estate/13-12-crefden-street-maidstone-vic/property-details-sold-residential-11496300/
 Maidstone,36/44 Eucalyptus Dr,apartment,2,420000.0,2017,12,16,auction sale,Pagan RE,https://www.realestateview.com.au/real-estate/36-44-eucalyptus-drive-maidstone-vic/property-details-sold-residential-11478485/
 Maidstone,43 Fisher St,house,3,895000.0,2017,12,16,auction sale,Sweeney,
-Maidstone,11D Rooney St,townhouse,3,670000.0,2017,12,16,passed in at auction,Biggin & Scott,https://www.realestateview.com.au/real-estate/11d-rooney-street-maidstone-vic/property-details-buy-residential-11504881/
+Maidstone,11D Rooney St,townhouse,3,670000.0,2017,12,16,passed in at auction,Biggin & Scott,https://www.realestateview.com.au/real-estate/11d-rooney-street-maidstone-vic/property-details-sold-residential-11504881/
 Maidstone,34 Suffolk St,house,3,825000.0,2017,12,16,auction sale,Jas Stephens - Yarraville,
 Malmsbury,31 Patterson St,land,0,166000.0,2017,12,9,private sale,Jellis Craig,https://www.realestateview.com.au/real-estate/31-patterson-street-malmsbury-vic/property-details-sold-residential-10852981/
 Malvern,3/395 Glenferrie Rd,unit,2,2100000.0,2017,12,16,passed in vendor bid,Marshall White & Co,https://www.realestateview.com.au/real-estate/3-395-glenferrie-road-malvern-vic/property-details-buy-residential-11484341/
@@ -1122,7 +1122,7 @@ Manor Lakes,28 Silvergum St,house,3,0,2017,12,16,passed in vendor bid,LJ Hooker 
 Maribyrnong,51 Macedon St,house,2,1250000.0,2017,12,16,passed in at auction,Sweeney,https://www.realestateview.com.au/real-estate/51-macedon-street-maribyrnong-vic/property-details-buy-residential-11474620/
 Maribyrnong,5/127 Raleigh Rd,townhouse,2,540000.0,2017,12,16,passed in vendor bid,Nelson Alexander,https://www.realestateview.com.au/real-estate/5-127-raleigh-road-maribyrnong-vic/property-details-sold-residential-11474478/
 Maribyrnong,202 Rosamond Rd,land,0,950000.0,2017,12,16,auction sale,Brad Teal,https://www.realestateview.com.au/real-estate/202-rosamond-road-maribyrnong-vic/property-details-sold-residential-11468034/
-Maribyrnong,57 Wests Rd,townhouse,3,625000.0,2017,12,16,passed in vendor bid,Raine & Horne Ascot Vale,https://www.realestateview.com.au/real-estate/57-wests-road-maribyrnong-vic/property-details-buy-residential-11482378/
+Maribyrnong,57 Wests Rd,townhouse,3,625000.0,2017,12,16,passed in vendor bid,Raine & Horne Ascot Vale,https://www.realestateview.com.au/real-estate/57-wests-road-maribyrnong-vic/property-details-sold-residential-11482378/
 Maribyrnong,44 La Scala Av,townhouse,2,510000.0,2017,12,11,sold before auction,Jellis Craig,https://www.realestateview.com.au/real-estate/44-la-scala-avenue-maribyrnong-vic/property-details-sold-residential-11483398/
 Maribyrnong,508/7 Thomas Holmes St,flat/unit/apartment,2,670000.0,2017,12,6,private sale,Avion Properties,
 Maribyrnong,17 Mitchell St,house,3,0,2017,12,16,passed in at auction,hockingstuart,
@@ -1132,7 +1132,7 @@ Maryborough,3/176 Park Rd,house,3,222000.0,2017,12,1,private sale,Ballarat Real 
 Mckinnon,1/4 Glen Orme Av,townhouse,3,1350000.0,2017,12,16,passed in vendor bid,Gary Peer & Associates,https://www.realestateview.com.au/real-estate/1-4-glen-orme-avenue-mckinnon-vic/property-details-buy-residential-11479042/
 Mckinnon,28 Lewis St,house,4,1820000.0,2017,12,16,auction sale,Hodges,https://www.realestateview.com.au/real-estate/28-lewis-street-mckinnon-vic/property-details-sold-residential-11485727/
 Mckinnon,273 Mckinnon Rd,house,4,1730000.0,2017,12,16,auction sale,Buxton,https://www.realestateview.com.au/real-estate/273-mckinnon-road-mckinnon-vic/property-details-sold-residential-11485787/
-Mckinnon,17/15A Wattle Gr,townhouse,2,878000.0,2017,12,16,auction sale,McGrath,https://www.realestateview.com.au/real-estate/17-15a-wattle-grove-mckinnon-vic/property-details-buy-residential-11488225/
+Mckinnon,17/15A Wattle Gr,townhouse,2,878000.0,2017,12,16,auction sale,McGrath,https://www.realestateview.com.au/real-estate/17-15a-wattle-grove-mckinnon-vic/property-details-sold-residential-11488225/
 Meadow Heights,2/1 Amarina Cl,unit,0,420000.0,2017,12,16,auction sale,YPA Estate Agents,
 Meadow Heights,2/54 Bicentennial Cr,unit,0,453000.0,2017,12,16,auction sale,YPA Estate Agents,
 Meadow Heights,11 Melaleuca Dr,house,3,563000.0,2017,12,16,auction sale,Ray White Glenroy,
@@ -1180,7 +1180,7 @@ Mernda,28 Bellini Way,house,0,495000.0,2017,12,12,private sale,Stockdale & Leggo
 Mernda,23 Monarch Av,house,3,580058.0,2017,12,12,sold before auction,Stockdale & Leggo South Morang,
 Mernda,31 Breadalbane Av,house,2,441000.0,2017,12,9,private sale,Morrison Kleeman,https://www.realestateview.com.au/real-estate/31-breadalbane-avenue-mernda-vic/property-details-sold-residential-11497279/
 Mernda,14 Stradling Rise,house,4,717000.0,2017,12,9,sold before auction,YPA Estate Agents,
-Mernda,35 Haig St,house,4,0,2017,12,16,passed in at auction,Ray White Mill Park,https://www.realestateview.com.au/real-estate/35-haig-street-mernda-vic/property-details-buy-residential-11482879/
+Mernda,35 Haig St,house,4,0,2017,12,16,passed in at auction,Ray White Mill Park,https://www.realestateview.com.au/real-estate/35-haig-street-mernda-vic/property-details-sold-residential-11482879/
 Mickleham,50 Callaway Dr,house,5,1500000.0,2017,12,16,auction sale,Barry Plant,
 Mickleham,11 Selkirk Way,land,0,220000.0,2017,12,9,private sale,Bombay Real Estate,
 Mickleham,Lot 2504 Ratadowne St,land,0,326000.0,2017,11,17,private sale,Bombay Real Estate,
@@ -1300,7 +1300,7 @@ Mount Waverley,4C Bales St,townhouse,4,0,2017,12,16,passed in vendor bid,Jellis 
 Mount Waverley,1 Heleus Ct,house,3,0,2017,12,16,passed in at auction,Ray White - Mount Waverley,
 Mount Waverley,4/454 High Street Rd,unit,2,0,2017,12,16,passed in vendor bid,Jellis Craig,https://www.realestateview.com.au/real-estate/4-454-high-street-road-mount-waverley-vic/property-details-sold-residential-11474440/
 Mount Waverley,10 Jack St,townhouse,3,0,2017,12,16,auction sale,McGrath Waverley,
-Mount Waverley,44 Josephine Av,house,5,0,2017,12,16,passed in at auction,Barry Plant,https://www.realestateview.com.au/real-estate/44-josephine-avenue-mount-waverley-vic/property-details-buy-residential-11382768/
+Mount Waverley,44 Josephine Av,house,5,0,2017,12,16,passed in at auction,Barry Plant,
 Mount Waverley,2/28 Park La,unit,2,0,2017,12,16,auction sale,Buxton,https://www.realestateview.com.au/real-estate/2-28-park-lane-mount-waverley-vic/property-details-sold-residential-11483096/
 Mount Waverley,11 Toombah St,house,6,0,2017,12,16,passed in at auction,Ray White - Mount Waverley,
 Mount Waverley,11 Hayfield Rd,house,5,0,2017,12,13,passed in vendor bid,Ray White - Mount Waverley,
@@ -1309,7 +1309,7 @@ Mulgrave,2 Bentley Ct,house,3,867000.0,2017,12,16,passed in at auction,Harcourts
 Mulgrave,33 Wanda St,house,3,825000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/33-wanda-street-mulgrave-vic/property-details-sold-residential-11484168/
 Mulgrave,8 Lynette Ct,house,4,901000.0,2017,12,13,auction sale,Ray White Glen Waverley,https://www.realestateview.com.au/real-estate/8-lynette-court-mulgrave-vic/property-details-sold-residential-11475589/
 Mulgrave,21 Manna Ct,house,4,1165000.0,2017,12,10,auction sale,Win Real Estate AUS,
-Mulgrave,2 Carson St,house,3,0,2017,12,16,passed in at auction,Hall & Partners First National,https://www.realestateview.com.au/real-estate/2-carson-street-mulgrave-vic/property-details-buy-residential-11496757/
+Mulgrave,2 Carson St,house,3,0,2017,12,16,passed in at auction,Hall & Partners First National,https://www.realestateview.com.au/real-estate/2-carson-street-mulgrave-vic/property-details-buy-residential-11497197/
 Mulgrave,65 Haverbrack Dr,house,4,0,2017,12,16,auction sale,Jellis Craig,https://www.realestateview.com.au/real-estate/65-haverbrack-drive-mulgrave-vic/property-details-sold-residential-11487439/
 Mulgrave,1/49 Wattle Gr,unit,2,0,2017,12,16,auction sale,Biggin & Scott Glen Waverley,
 Mulgrave,17 Windermere Cr,house,5,0,2017,12,16,passed in at auction,Ray White Glen Waverley,https://www.realestateview.com.au/real-estate/17-windermere-crescent-mulgrave-vic/property-details-sold-residential-11330765/
@@ -1330,7 +1330,7 @@ Narre Warren South,27 Amhurst Dr,house,5,580000.0,2017,11,27,private sale,Biggin
 Narre Warren South,15 Hilltop Cl,house,4,0,2017,11,30,private sale,Biggin & Scott,
 New Gisborne,14 Carbine Ct,house,3,625000.0,2017,12,16,auction sale,Raine & Horne Gisborne,
 Newcomb,42 Helms St,house,3,469000.0,2017,12,16,auction sale,PRD Nationwide Geelong,
-Newington,11 Redan St,townhouse,2,0,2017,12,11,passed in vendor bid,Ray White Ballarat,https://www.realestateview.com.au/real-estate/11-redan-street-newington-vic/property-details-buy-residential-11440890/
+Newington,11 Redan St,townhouse,2,0,2017,12,11,passed in vendor bid,Ray White Ballarat,https://www.realestateview.com.au/real-estate/11-redan-street-newington-vic/property-details-sold-residential-11440890/
 Newport,9A Berty St,townhouse,4,1090000.0,2017,12,16,auction sale,Ray White Coburg,https://www.realestateview.com.au/real-estate/9a-berty-street-newport-vic/property-details-sold-residential-11481253/
 Newport,91 Gordon St,townhouse,2,660000.0,2017,12,16,auction sale,Jas Stephens - Yarraville,
 Newport,16A Johnston St,house,5,1180000.0,2017,12,16,passed in vendor bid,Jas Stephens - Yarraville,
@@ -1416,7 +1416,7 @@ Pakenham,21 The Parkway,house,4,0,2017,12,13,private sale,Barry Plant,https://ww
 Pakenham,14 Victoria Pl,house,4,0,2017,12,13,passed in at auction,Ray White Pakenham,https://www.realestateview.com.au/real-estate/14-victoria-place-pakenham-vic/property-details-buy-residential-11510104/
 Pakenham Upper,75 Old Gembrook Rd,house,4,900000.0,2017,12,11,private sale,Barry Plant,https://www.realestateview.com.au/real-estate/75-old-gembrook-road-pakenham-upper-vic/property-details-sold-residential-11371377/
 Pakenham Upper,211 Old Gembrook Rd,house,4,980000.0,2017,12,5,private sale,Harcourts Pakenham,https://www.realestateview.com.au/real-estate/211-old-gembrook-road-pakenham-upper-vic/property-details-sold-residential-11494536/
-Parkdale,2/18 Eighth St,house,2,975000.0,2017,12,16,passed in vendor bid,Buxton,https://www.realestateview.com.au/real-estate/2-18-eighth-street-parkdale-vic/property-details-buy-residential-11479608/
+Parkdale,2/18 Eighth St,house,2,975000.0,2017,12,16,passed in vendor bid,Buxton,https://www.realestateview.com.au/real-estate/2-18-eighth-street-parkdale-vic/property-details-sold-residential-11479608/
 Parkdale,28 Keiller Av,house,5,1160000.0,2017,12,16,passed in vendor bid,Buxton,https://www.realestateview.com.au/real-estate/28-keiller-avenue-parkdale-vic/property-details-sold-residential-11485706/
 Parkdale,1/5 Sixth St,house,3,1150000.0,2017,12,16,passed in vendor bid,Buxton,https://www.realestateview.com.au/real-estate/1-5-sixth-street-parkdale-vic/property-details-sold-residential-11469751/
 Parkdale,1/1 White St,apartment,2,465000.0,2017,12,16,passed in vendor bid,Thomson Real Estate,https://www.realestateview.com.au/real-estate/1-1-white-street-parkdale-vic/property-details-buy-residential-11488386/
@@ -1505,7 +1505,7 @@ Reservoir,2/33 Byfield St,villa,3,700500.0,2017,12,16,auction sale,Ray Mascaro &
 Reservoir,4/8 Chaleyer St,townhouse,3,560000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/4-8-chaleyer-street-reservoir-vic/property-details-sold-residential-11482506/
 Reservoir,1/59 Cheddar Rd,townhouse,1,455000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/1-59-cheddar-road-reservoir-vic/property-details-sold-residential-11479255/
 Reservoir,4/99 Cuthbert Rd,unit,2,460000.0,2017,12,16,auction sale,Melbourne Real Estate Solutions,https://www.realestateview.com.au/real-estate/4-99-cuthbert-road-reservoir-vic/property-details-sold-residential-11488147/
-Reservoir,7 East St,house,3,810000.0,2017,12,16,auction sale,hockingstuart,https://www.realestateview.com.au/real-estate/7-east-street-reservoir-vic/property-details-sold-residential-11492270/
+Reservoir,7 East St,house,3,810000.0,2017,12,16,auction sale,hockingstuart,https://www.realestateview.com.au/real-estate/7-east-street-reservoir-vic/property-details-buy-residential-11633020/
 Reservoir,72 Hickford St,house,3,920000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/72-hickford-street-reservoir-vic/property-details-sold-residential-11414387/
 Reservoir,1019 High St,house,3,865000.0,2017,12,16,auction sale,Barry Plant,https://www.realestateview.com.au/real-estate/1019-high-street-reservoir-vic/property-details-sold-residential-11474473/
 Reservoir,1/830 High St,townhouse,3,585000.0,2017,12,16,auction sale,Ray White,https://www.realestateview.com.au/real-estate/1-830-high-street-reservoir-vic/property-details-buy-residential-11480994/
@@ -1544,7 +1544,7 @@ Richmond,21 Davison St,house,3,1182000.0,2017,12,16,auction sale,Jellis Craig,ht
 Richmond,3 Survey St,house,3,1710000.0,2017,12,16,auction sale,Collins Simms,https://www.realestateview.com.au/real-estate/3-survey-street-richmond-vic/property-details-sold-residential-11481150/
 Richmond,81 Wellington St,house,2,1145000.0,2017,12,16,auction sale,Nelson Alexander,https://www.realestateview.com.au/real-estate/81-wellington-street-richmond-vic/property-details-sold-residential-11484480/
 Richmond,39 York St,house,3,1000000.0,2017,12,16,auction sale,Biggin & Scott,https://www.realestateview.com.au/real-estate/39-york-street-richmond-vic/property-details-sold-residential-11483013/
-Richmond,14/45 York St,apartment,1,530000.0,2017,12,16,auction sale,Marshall White One,https://www.realestateview.com.au/real-estate/14-45-york-street-richmond-vic/property-details-sold-residential-11474808/
+Richmond,14/45 York St,apartment,1,530000.0,2017,12,16,auction sale,Marshall White One,
 Richmond,9/4 Bendigo St,apartment,1,400000.0,2017,12,6,private sale,Biggin & Scott,https://www.realestateview.com.au/real-estate/9-4-bendigo-street-richmond-vic/property-details-sold-residential-11401532/
 Richmond,32/73 River St,apartment,2,590000.0,2017,11,28,private sale,Hodges,
 Richmond,317/2 Mcgoun St,apartment,1,465000.0,2017,11,24,private sale,Jellis Craig,https://www.realestateview.com.au/real-estate/317-2-mcgoun-street-richmond-vic/property-details-sold-residential-11445281/
@@ -1936,7 +1936,7 @@ Williamstown,192 Melbourne Rd,house,3,870000.0,2017,12,16,passed in vendor bid,R
 Williamstown,151 Nelson Pl,house,3,2400000.0,2017,12,16,passed in vendor bid,Stockdale & Leggo Sunshine,
 Williamstown,75 Albert St,house,3,0,2017,12,16,passed in at auction,Greg Hocking Elly Partners,
 Williamstown,19 Railway Pl.N,house,3,0,2017,12,16,passed in at auction,Greg Hocking Elly Partners,
-Windsor,68 Hornby St,house,2,1000000.0,2017,12,16,passed in at auction,Beller Real Estate,https://www.realestateview.com.au/real-estate/68-hornby-street-windsor-vic/property-details-buy-residential-11491251/
+Windsor,68 Hornby St,house,2,1000000.0,2017,12,16,passed in at auction,Beller Real Estate,https://www.realestateview.com.au/real-estate/68-hornby-street-windsor-vic/property-details-sold-residential-11491251/
 Windsor,3/24 The Avenue,apartment,1,430000.0,2017,12,15,sold before auction,Forefront Real Estate,
 Wodonga,64 Huon Creek Rd,house,4,665000.0,2017,12,4,sold before auction,One Agency Albury Wodonga,
 Wollert,17 Wistow Cha,house,4,758000.0,2017,12,17,auction sale,Iconek EA,
