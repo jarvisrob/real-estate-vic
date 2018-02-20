@@ -66,15 +66,21 @@ class Realty:
 
     def full_details(self):
         return str(self.addr) + ', ' + str(self.br) + ' bedroom ' + str(self.classification).lower() + ', ' \
-            + str(self.method_sale).lower() + ' for $' + str(self.price) \
+            + str(self.method_sale).lower() + ' for $' + self.price_str() \
             + ' on ' + self.date_sale() + ', with agent ' + str(self.agent)
 
     def date_sale(self):
         return str(self.year_sale) + '-' + str(self.month_sale).zfill(2) + '-' + str(self.day_sale).zfill(2)
 
+    def price_str(self):
+        if self.price is None:
+            return ""
+        else:
+            return str(self.price)
+
     def csv_line(self, suburb_name):
         return '"' + suburb_name + '","' + self.addr + '","' + self.classification.lower() + '",' + str(self.br) + ',' \
-            + str(self.price) + ',' + self.date_sale() \
+            + self.price_str() + ',' + self.date_sale() \
             + ',"' + self.method_sale.lower() + '","' + self.agent + '","' + self.weblink + '"'
 
 
@@ -152,11 +158,11 @@ def parse_realty_data(data):
     # Next <td> is price
     td_price = data[2].string.strip()
     if td_price == 'undisclosed':
-        price = 0
+        price = None
     elif td_price == '$undisclosed':
-        price = 0
+        price = None
     else:
-        price = float(td_price.replace('$', '').replace(',', ''))
+        price = int(td_price.replace('$', '').replace(',', ''))
 
     # Next <td> is classification
     classification = data[3].string.strip()
