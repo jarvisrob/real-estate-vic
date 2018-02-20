@@ -17,7 +17,7 @@ class SuburbContainer:
 
     def write_csv_all(self, filename):
         file = open(filename, 'w')
-        file.writelines("Suburb,Address,Classification,NumberOfBedrooms,Price,YearOutcome,MonthOutcome,DayOutcome,Outcome,Agent,Url" + "\n")
+        file.writelines("Suburb,AddressLine,Classification,NumberOfBedrooms,Price,OutcomeDate,Outcome,Agent,WebUrl" + "\n")
         for suburb in self:
             for realty in suburb:
                 file.writelines(realty.csv_line(suburb.name) + '\n')
@@ -67,15 +67,14 @@ class Realty:
     def full_details(self):
         return str(self.addr) + ', ' + str(self.br) + ' bedroom ' + str(self.classification).lower() + ', ' \
             + str(self.method_sale).lower() + ' for $' + str(self.price) \
-            + ' on ' + str(self.day_sale) + '/' + str(self.month_sale) + '/' + str(self.year_sale) \
-            + ', with agent ' + str(self.agent)
+            + ' on ' + self.date_sale() + ', with agent ' + str(self.agent)
 
     def date_sale(self):
-        return str(self.year_sale) + '-' + str(self.month_sale) + '-' + str(self.day_sale)
+        return str(self.year_sale) + '-' + str(self.month_sale).zfill(2) + '-' + str(self.day_sale).zfill(2)
 
     def csv_line(self, suburb_name):
         return '"' + suburb_name + '","' + self.addr + '","' + self.classification.lower() + '",' + str(self.br) + ',' \
-            + str(self.price) + ',' + str(self.year_sale) + ',' + str(self.month_sale) + ',' + str(self.day_sale) \
+            + str(self.price) + ',' + self.date_sale() \
             + ',"' + self.method_sale.lower() + '","' + self.agent + '","' + self.weblink + '"'
 
 
