@@ -85,17 +85,10 @@ class Realty:
 
 
 def parse_suburb_name(suburb_element):
-#    name_raw = suburb_element.div.h2.string
-#    return name_raw.partition(' Sales &')[0]
     return suburb_element["data-id"]
 
 
 def find_realty_body(suburb_element):
-    # next_sibling is often the \n character, so keep going until find the tag
-#    candidate = suburb_element.next_sibling
-#    while candidate == '\n':
-#        candidate = candidate.next_sibling
-#    return candidate.tbody
     return suburb_element.table.tbody
 
 
@@ -109,9 +102,6 @@ def check_is_more_results(realty_body):
 
 
 def find_realty_rows(realty_body):
-#    realty_table_element = realty_body.find_all('table')[0]
-#    rows = realty_table_element.find_all('tr')
-#    rows.pop(0)  # remove heading row
     return realty_body.find_all("tr")
 
 
@@ -121,17 +111,6 @@ def find_realty_body_on_more_page(url, suburb_name):
     print('Soup collected for', suburb_name, 'at', url)
     suburb_element = soup.find_all('div', 'pd-content-heading-dark')[0]
     return find_realty_body(suburb_element)
-
-
-# def find_realty_elements(suburb_element):
-#     candidate = suburb_element.next_sibling
-#     while candidate == '\n':
-#         candidate = candidate.next_sibling
-#     realty_table_element = candidate.find_all('table')[0]
-#     rows = realty_table_element.find_all('tr')
-#     rows.pop(0)  # remove heading row
-#     return rows
-
 
 def parse_realty_data(data):
 
@@ -198,7 +177,6 @@ def main():
     # Start with 'M' suburbs, but later extend to all suburbs A-Z
     atoz = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U',
             'V', 'W', 'X', 'Y', 'Z']
-    # atoz = ['M']
 
     # Create the suburb container
     suburb_container = SuburbContainer()
@@ -224,11 +202,6 @@ def main():
 
             # Find the body of the realty table for this suburb element and check for 'View more results' button
             realty_body = find_realty_body(suburb_element)
-#            [ismore, relurl] = check_is_more_results(realty_body)
-
-            # If there are more results, then obtain realty_body from THAT page instead
-#            if ismore:
-#                realty_body = find_realty_body_on_more_page(baseurl + relurl, suburb.name)
 
             # Parse out the rows of realty data
             rows = find_realty_rows(realty_body)
@@ -251,7 +224,6 @@ def main():
         print('... Parsing complete:', str(suburb_container.nsuburbs), 'suburbs found')
 
     # Write results to file
-    #filename = input('Enter file name to write results: ')
     suburb_container.write_csv_all(args.outfile)
 
 
