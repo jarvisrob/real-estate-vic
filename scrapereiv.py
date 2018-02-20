@@ -1,6 +1,7 @@
 __author__ = 'Rob'
 
 # Imports
+import argparse
 import requests
 from bs4 import BeautifulSoup
 
@@ -16,6 +17,7 @@ class SuburbContainer:
 
     def write_csv_all(self, filename):
         file = open(filename, 'w')
+        file.writelines("Suburb,Address,Classification,NumberOfBedrooms,Price,YearOutcome,MonthOutcome,DayOutcome,Outcome,Agent,Url" + "\n")
         for suburb in self:
             for realty in suburb:
                 file.writelines(realty.csv_line(suburb.name) + '\n')
@@ -72,9 +74,9 @@ class Realty:
         return str(self.year_sale) + '-' + str(self.month_sale) + '-' + str(self.day_sale)
 
     def csv_line(self, suburb_name):
-        return suburb_name + ',' + self.addr + ',' + self.classification.lower() + ',' + str(self.br) + ',' \
+        return '"' + suburb_name + '","' + self.addr + '","' + self.classification.lower() + '",' + str(self.br) + ',' \
             + str(self.price) + ',' + str(self.year_sale) + ',' + str(self.month_sale) + ',' + str(self.day_sale) \
-            + ',' + self.method_sale.lower() + ',' + self.agent + ',' + self.weblink
+            + ',"' + self.method_sale.lower() + '","' + self.agent + '","' + self.weblink + '"'
 
 
 def parse_suburb_name(suburb_element):
@@ -179,6 +181,11 @@ def parse_realty_data(data):
 
 def main():
 
+    # Argument parser
+    parser = argparse.ArgumentParser()
+    parser.add_argument("outfile", help="File name to write output")
+    args = parser.parse_args()
+
     # Base url
     baseurl = 'http://www.realestateview.com.au'
     midurl = '/propertydata/auction-results/victoria/'
@@ -196,7 +203,7 @@ def main():
 
         # Obtain page html and convert to soup
         response = requests.get(url)
-        soup = BeautifulSoup(response.content, 'lxml')
+        soup = BeautifulSoup(response.content, "html.parser")
         print('Soup collected for', letter, 'at', url)
 
         # Locate the suburb
@@ -239,8 +246,8 @@ def main():
         print('... Parsing complete:', str(suburb_container.nsuburbs), 'suburbs found')
 
     # Write results to file
-    filename = input('Enter file name to write results: ')
-    suburb_container.write_csv_all(filename)
+    #filename = input('Enter file name to write results: ')
+    suburb_container.write_csv_all(args.outfile)
 
 
 if __name__ == '__main__':
