@@ -6,8 +6,7 @@ import numpy as np
 # Constants
 new_file_prefix = "re-vic"
 
-# files_csv = glob.glob('*.csv')
-files_csv = ["scrape_2015-09-12.csv", "scrape_2015-09-19.csv", "scrape_2015-09-20.csv"]
+files_csv = glob.glob('*.csv')
 
 # For each csv file
 for file_name in files_csv:
