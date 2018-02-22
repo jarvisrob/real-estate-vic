@@ -17,7 +17,7 @@ class SuburbContainer:
 
     def write_csv_all(self, filename):
         file = open(filename, 'w')
-        file.writelines("Suburb,AddressLine,Classification,NumberOfBedrooms,Price,OutcomeDate,Outcome,Agent,WebUrl" + "\n")
+        file.writelines("\"Suburb\",\"AddressLine\",\"Classification\",\"NumberOfBedrooms\",\"Price\",\"OutcomeDate\",\"Outcome\",\"Agent\",\"WebUrl\"" + "\n")
         for suburb in self:
             for realty in suburb:
                 file.writelines(realty.csv_line(suburb.name) + '\n')
@@ -80,8 +80,8 @@ class Realty:
 
     def csv_line(self, suburb_name):
         return '"' + suburb_name + '","' + self.addr + '","' + self.classification.lower() + '",' + str(self.br) + ',' \
-            + self.price_str() + ',' + self.date_sale() \
-            + ',"' + self.method_sale.lower() + '","' + self.agent + '","' + self.weblink + '"'
+            + self.price_str() + ',"' + self.date_sale() \
+            + '","' + self.method_sale.lower() + '","' + self.agent + '","' + self.weblink + '"'
 
 
 def parse_suburb_name(suburb_element):
@@ -141,7 +141,7 @@ def parse_realty_data(data):
     elif td_price == '$undisclosed':
         price = None
     else:
-        price = int(td_price.replace('$', '').replace(',', ''))
+        price = float(td_price.replace('$', '').replace(',', ''))
 
     # Next <td> is classification
     classification = data[3].string.strip()
