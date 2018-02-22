@@ -3,6 +3,9 @@ import pandas as pd
 import csv
 import numpy as np
 
+# Constants
+new_file_prefix = "re-vic"
+
 # files_csv = glob.glob('*.csv')
 files_csv = ["scrape_2015-09-12.csv", "scrape_2015-09-19.csv", "scrape_2015-09-20.csv"]
 
@@ -22,5 +25,9 @@ for file_name in files_csv:
     # Replace Price = 0 (how undisclosed was handled in original scrape/csv) with NaN
     df["Price"] = df["Price"].replace(0, np.NaN)
 
+    # New file names: re-vic_yyyy-mm-dd.csv (using 2nd element, Python is zero-indexed)
+    file_name_parts = file_name.split("_")
+    new_file_name = new_file_prefix + "_" + file_name_parts[1]
+
     # Write to csv with double quotes around non-numeric entries, includes headers by default
-    df.to_csv("mod_" + file_name, index=False, quoting=csv.QUOTE_NONNUMERIC)
+    df.to_csv(new_file_name, index=False, quoting=csv.QUOTE_NONNUMERIC)
