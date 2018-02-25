@@ -16,7 +16,9 @@ GO
 -- Kill any existing schemas or tables if exists
 DROP TABLE IF EXISTS RealEstate.Results;
 DROP TABLE IF EXISTS RealEstate.PrelimResults;
+DROP TABLE IF EXISTS Staging.StagingResults;
 DROP SCHEMA IF EXISTS RealEstate;
+DROP SCHEMA IF EXISTS Staging;
 GO
 
 -- Create ReslEstate schema
@@ -54,3 +56,20 @@ ALTER TABLE RealEstate.PrelimResults
 ADD CONSTRAINT PK_PrelimResultId PRIMARY KEY (PrelimResultId);
 GO
 
+-- Create Staging schema
+CREATE SCHEMA Staging;
+GO
+
+-- Staging table for real estate results, gets loaded into RealEstate.PrelimResults
+SELECT *
+INTO Staging.StagingResults
+FROM RealEstate.Results
+WHERE 1 = 2;
+GO
+
+-- Rename the ID column in Staging table and then make it the primary key
+EXEC sys.sp_rename 'Staging.StagingResults.ResultId', 'StagingResultId', 'COLUMN';
+GO
+ALTER TABLE Staging.StagingResults
+ADD CONSTRAINT PK_StagingResultId PRIMARY KEY (StagingResultId);
+GO
