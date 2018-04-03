@@ -119,10 +119,10 @@ def parse_realty_data(data):
     td_weblink = data[0].find_all('a')
     if not td_weblink:
         weblink = ''
-        td_addr = data[0].span.string.strip()
+        td_addr = data[0].span.string.strip().replace("\"", "")
     else:
         weblink = td_weblink[0]['href']
-        td_addr = td_weblink[0].span.string.strip()
+        td_addr = td_weblink[0].span.string.strip().replace("\"", "")
     addr = ' '.join(td_addr.split())
 
     # Next <td> is number of bedrooms
@@ -132,10 +132,10 @@ def parse_realty_data(data):
     elif td_br == '-' or td_br == "":
         br = 0
     else:
-        br = int(td_br.strip())
+        br = int(td_br.strip().replace("\"", ""))
 
     # Next <td> is price
-    td_price = data[2].string.strip()
+    td_price = data[2].string.strip().replace("\"", "")
     if td_price == 'undisclosed':
         price = None
     elif td_price == '$undisclosed':
@@ -144,20 +144,20 @@ def parse_realty_data(data):
         price = float(td_price.replace('$', '').replace(',', ''))
 
     # Next <td> is classification
-    classification = data[3].string.strip()
+    classification = data[3].string.strip().replace("\"", "")
 
     # Next <td> is method of sale
-    method_sale = data[4].string.strip()
+    method_sale = data[4].string.strip().replace("\"", "")
 
     # Next <td> is date of sale
-    td_date_sale = data[5].string.strip()
+    td_date_sale = data[5].string.strip().replace("\"", "")
     [day_str, month_str, year_str] = td_date_sale.split('/')
     day_sale = int(day_str)
     month_sale = int(month_str)
     year_sale = int(year_str)
 
     # Next (and final) <td> is agent
-    agent = data[6].string.strip()
+    agent = data[6].string.strip().replace("\"", "")
 
     # Return parsing results
     return [addr, br, price, classification, method_sale, year_sale, month_sale, day_sale, agent, weblink]
