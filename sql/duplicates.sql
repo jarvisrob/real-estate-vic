@@ -3,7 +3,7 @@
 --SELECT ROW_NUMBER() OVER(PARTITION BY Suburb, AddressLine, Classification, OutcomeDate, Outcome, Agent  -- Assumes these features are unique for each activity
 --						  ORDER BY StagingID DESC) AS DuplicateNumber
 --	, *
---FROM RealEstate.StagingResults
+--FROM Reiv.StagingResults
 --ORDER BY StagingId
 -- This query requires you to manually search through the list. Need to write a better one.
 
@@ -14,9 +14,11 @@ DROP TABLE IF EXISTS #AppendNumberOfDuplicates;
 
 SELECT *
 		, ROW_NUMBER() OVER(PARTITION BY Suburb, AddressLine, Classification, OutcomeDate, Outcome, Agent  -- Assumes these features are unique for each activity
-						  ORDER BY StagingID DESC) AS DuplicateNumber
+						  --ORDER BY StagingID DESC) AS DuplicateNumber
+						  ORDER BY PrelimID DESC) AS DuplicateNumber
 INTO #AppendDuplicateNumber
-FROM RealEstate.StagingResults;
+--FROM Reiv.StagingResults;
+FROM Reiv.PrelimResults;
 
 SELECT *
 	, MAX(DuplicateNumber) OVER(PARTITION BY Suburb, AddressLine, Classification, OutcomeDate, Outcome, Agent) AS NumberOfDuplicates
@@ -26,7 +28,8 @@ FROM #AppendDuplicateNumber
 SELECT *
 FROM #AppendNumberOfDuplicates
 WHERE NumberOfDuplicates > 1
-ORDER BY StagingId;
+--ORDER BY Suburb, AddressLine, Classification, StagingId;
+ORDER BY Suburb, AddressLine, Classification, PrelimId;
 
 GO
 
@@ -34,7 +37,7 @@ GO
 
 -- Duplicates are removed from Staging table
 -- Assumes the most recent record, which should have the greatest StagingID, has the best info so far
-CREATE PROCEDURE RealEstate.DeleteStagingDuplicates
+CREATE PROCEDURE Reiv.DeleteStagingDuplicates
 AS
 WITH cte_AppendDuplicateNumber
 AS
@@ -42,7 +45,7 @@ AS
 	SELECT Suburb, AddressLine, Classification, NumberOfBedrooms, Price, OutcomeDate, Outcome, Agent, WebUrl,
 		ROW_NUMBER() OVER(PARTITION BY Suburb, AddressLine, Classification, OutcomeDate, Outcome, Agent  -- Assumes these features are unique for each activity
 						  ORDER BY StagingID DESC) AS DuplicateNumber
-	FROM RealEstate.StagingResults
+	FROM Reiv.StagingResults
 )
 DELETE
 FROM cte_AppendDuplicateNumber

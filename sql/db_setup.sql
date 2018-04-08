@@ -14,21 +14,21 @@ USE RealEstateVicDb;
 GO
 
 -- Kill any existing schemas or tables if exists
-DROP TABLE IF EXISTS RealEstate.Results;
-DROP TABLE IF EXISTS RealEstate.PrelimResults;
-DROP TABLE IF EXISTS RealEstate.StagingResults;
-DROP PROCEDURE IF EXISTS RealEstate.DeleteStagingDuplicates;
-DROP PROCEDURE IF EXISTS RealEstate.UpdatePrelimResults;
-DROP PROCEDURE IF EXISTS RealEstate.UpdateResults;
-DROP SCHEMA IF EXISTS RealEstate;
+DROP TABLE IF EXISTS Reiv.Results;
+DROP TABLE IF EXISTS Reiv.PrelimResults;
+DROP TABLE IF EXISTS Reiv.StagingResults;
+DROP PROCEDURE IF EXISTS Reiv.DeleteStagingDuplicates;
+DROP PROCEDURE IF EXISTS Reiv.UpdatePrelimResults;
+DROP PROCEDURE IF EXISTS Reiv.UpdateResults;
+DROP SCHEMA IF EXISTS Reiv;
 GO
 
 -- Create ReslEstate schema
-CREATE SCHEMA RealEstate;
+CREATE SCHEMA Reiv;
 GO
 
 -- Main results table: RealEstate.Results
-CREATE TABLE RealEstate.Results
+CREATE TABLE Reiv.Results
 (
 	ResultId			INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
 	Suburb				NVARCHAR(50) NOT NULL,
@@ -46,28 +46,28 @@ GO
 -- Prelim table for results early in week: RealEstate.PrelimResults
 -- Created as copy of main results table, WHERE 1 = 2 ensures no rows are copied, just column names
 SELECT *
-INTO RealEstate.PrelimResults
-FROM RealEstate.Results
+INTO Reiv.PrelimResults
+FROM Reiv.Results
 WHERE 1 = 2;
 GO
 
 -- Rename the ID column in Prelim table and then make it the primary key
-EXEC sys.sp_rename 'RealEstate.PrelimResults.ResultId', 'PrelimId', 'COLUMN';
+EXEC sys.sp_rename 'Reiv.PrelimResults.ResultId', 'PrelimId', 'COLUMN';
 GO
-ALTER TABLE RealEstate.PrelimResults
+ALTER TABLE Reiv.PrelimResults
 ADD CONSTRAINT PK_PrelimId PRIMARY KEY (PrelimId);
 GO
 
 -- Staging table for real estate results, gets loaded into RealEstate.PrelimResults
 SELECT *
-INTO RealEstate.StagingResults
-FROM RealEstate.Results
+INTO Reiv.StagingResults
+FROM Reiv.Results
 WHERE 1 = 2;
 GO
 
 -- Rename the ID column in Staging table and then make it the primary key
-EXEC sys.sp_rename 'RealEstate.StagingResults.ResultId', 'StagingId', 'COLUMN';
+EXEC sys.sp_rename 'Reiv.StagingResults.ResultId', 'StagingId', 'COLUMN';
 GO
-ALTER TABLE RealEstate.StagingResults
+ALTER TABLE Reiv.StagingResults
 ADD CONSTRAINT PK_StagingId PRIMARY KEY (StagingId);
 GO
