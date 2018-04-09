@@ -17,9 +17,9 @@ GO
 DROP TABLE IF EXISTS Reiv.Results;
 DROP TABLE IF EXISTS Reiv.PrelimResults;
 DROP TABLE IF EXISTS Reiv.StagingResults;
-DROP PROCEDURE IF EXISTS Reiv.DeleteStagingDuplicates;
-DROP PROCEDURE IF EXISTS Reiv.UpdatePrelimResults;
-DROP PROCEDURE IF EXISTS Reiv.UpdateResults;
+DROP PROCEDURE IF EXISTS Reiv.usp_DeleteStagingDuplicates;
+DROP PROCEDURE IF EXISTS Reiv.usp_UpdatePrelimResults;
+DROP PROCEDURE IF EXISTS Reiv.usp_UpdateResults;
 DROP SCHEMA IF EXISTS Reiv;
 GO
 

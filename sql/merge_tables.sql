@@ -3,10 +3,10 @@
 -- And do this all with one procedure ...
 -- But don't think this is possible :(
 
-DROP PROCEDURE IF EXISTS Reiv.UpdatePrelimResults;
+DROP PROCEDURE IF EXISTS Reiv.usp_UpdatePrelimResults;
 GO
 
-CREATE PROCEDURE Reiv.UpdatePrelimResults
+CREATE PROCEDURE Reiv.usp_UpdatePrelimResults
 AS
 BEGIN
 	MERGE INTO Reiv.PrelimResults AS p
@@ -53,16 +53,16 @@ BEGIN
 		);
 	DELETE
 	FROM Reiv.StagingResults;
-END
+END;
 GO
 
 
 
 
-DROP PROCEDURE IF EXISTS Reiv.UpdateResults;
+DROP PROCEDURE IF EXISTS Reiv.usp_UpdateResults;
 GO
 
-CREATE PROCEDURE Reiv.UpdateResults
+CREATE PROCEDURE Reiv.usp_UpdateResults
 AS
 BEGIN
 	MERGE INTO Reiv.Results AS r
@@ -109,5 +109,5 @@ BEGIN
 		);
 	DELETE
 	FROM Reiv.PrelimResults;
-END
+END;
 GO

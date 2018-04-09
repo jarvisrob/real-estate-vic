@@ -37,7 +37,10 @@ GO
 
 -- Duplicates are removed from Staging table
 -- Assumes the most recent record, which should have the greatest StagingID, has the best info so far
-CREATE PROCEDURE Reiv.DeleteStagingDuplicates
+DROP PROCEDURE IF EXISTS Reiv.usp_DeleteStagingDuplicates;
+GO
+
+CREATE PROCEDURE Reiv.usp_DeleteStagingDuplicates
 AS
 WITH cte_AppendDuplicateNumber
 AS
