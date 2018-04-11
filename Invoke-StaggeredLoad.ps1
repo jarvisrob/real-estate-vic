@@ -38,7 +38,7 @@ $Counter = 0
 $Files | ForEach-Object {
     Set-AzureStorageBlobContent -Container $BlobContainerName -File $_.FullName -Blob $_.Name
     $Counter = $Counter + 1
-    Write-Output "Copied: $_.Name, Counter = $Counter"
+    Write-Output "Copied: $_, Counter = $Counter"
     If (($Counter % $FilesPerPipelineRun -eq 0) -or ($Counter -ge $NumberOfFiles)) {
         Write-Output "Invoking Data Factory: $DataFactoryName with pipeline: $PipelineName at file number: $Counter"
         $PipelineRunId = Invoke-AzureRmDataFactoryV2Pipeline -ResourceGroupName $DataFactoryResourceGroup -DataFactoryName $DataFactoryName -PipelineName $PipelineName
