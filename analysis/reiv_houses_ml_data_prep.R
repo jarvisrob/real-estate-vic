@@ -19,8 +19,6 @@ reiv_raw <-
     stringsAsFactors = FALSE
   ) %>%
     as_tibble()
-# 
-# reiv_raw <- read_csv("reiv.csv")
 
 
 # Basic cleaning --------------------------------------------------------------
@@ -184,7 +182,7 @@ suburb_summary %>% print(n = 20)
 # There's lots of suburbs with only a few sales
 suburbs_few_sales <- suburb_summary %>% filter(nSales <= 10) %>% pull(Suburb)
 print(paste0(
-  "Number of suburbs wtih <= 10 sales = ", length(suburbs_few_sales)
+  "Number of suburbs with <= 10 sales = ", length(suburbs_few_sales)
 ))
 
 # Consolidate by treating those as "other" suburbs
@@ -289,7 +287,7 @@ colnames(outcome_summary) <- c(
   "maxPrice", 
   "meanPrice", 
   "sdPrice"
-  )
+)
 outcome_summary
 
 # Is there a relationship between Price and Outcome?
@@ -538,6 +536,17 @@ View(houses_amls)
 
 # Wirte to CSV ready to be used in Azure Machine Learning Studio
 houses_amls %>% write_csv("houses_ready_for_amls.csv")
+
+
+
+
+# Other data needed for Azure Machine Learning Studio -------------------------
+suburbs_few_sales %>%
+  as.tibble() %>%
+  write_csv("suburbs_few_sales.csv")
+larger_agents %>% 
+  as.tibble() %>%
+  write_csv("larger_agents.csv")
 
 
 
