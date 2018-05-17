@@ -17,6 +17,7 @@ GO
 DROP TABLE IF EXISTS Reiv.Results;
 DROP TABLE IF EXISTS Reiv.PrelimResults;
 DROP TABLE IF EXISTS Reiv.StagingResults;
+DROP TABLE IF EXISTS Reiv.SoldUnsoldMapping;
 DROP PROCEDURE IF EXISTS Reiv.usp_DeleteStagingDuplicates;
 DROP PROCEDURE IF EXISTS Reiv.usp_UpdatePrelimResults;
 DROP PROCEDURE IF EXISTS Reiv.usp_UpdateResults;
@@ -70,4 +71,24 @@ EXEC sys.sp_rename 'Reiv.StagingResults.ResultId', 'StagingId', 'COLUMN';
 GO
 ALTER TABLE Reiv.StagingResults
 ADD CONSTRAINT PK_StagingId PRIMARY KEY (StagingId);
+GO
+
+-- Table used to map outcomes to sold/unsold
+CREATE TABLE Reiv.SoldUnsoldMapping
+(
+	MapId			INT IDENTITY(1,1) PRIMARY KEY NOT NULL,
+	Outcome			NVARCHAR(30) NOT NULL,
+	SoldOrUnsold	NVARCHAR(6) NOT NULL
+);
+GO
+INSERT INTO Reiv.SoldUnsoldMapping (Outcome, SoldOrUnsold)
+VALUES
+	('passed in at auction', 'Unsold'),
+	('passed in vendor bid', 'Unsold'),
+	('sale by tender', 'Sold'),
+	('sold before auction', 'Sold'),
+	('auction sale', 'Sold'),
+	('expression of interest', 'Unsold'),
+	('sold after auction', 'Sold'),
+	('private sale', 'Sold');
 GO
