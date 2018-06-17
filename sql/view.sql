@@ -22,7 +22,7 @@ AS
 	)
 	SELECT uwod.*, su.SoldOrUnsold
 	FROM cte_UnionWithoutDuplicates AS uwod
-	INNER JOIN Reiv.SoldUnsoldMapping AS su
+	LEFT JOIN Reiv.SoldUnsoldMapping AS su
 		ON uwod.Outcome = su.Outcome;
 
 
@@ -49,7 +49,7 @@ AS
 	)
 	SELECT uwod.*, su.SoldOrUnsold
 	FROM cte_UnionWithoutDuplicates AS uwod
-	INNER JOIN Reiv.SoldUnsoldMapping AS su
+	LEFT JOIN Reiv.SoldUnsoldMapping AS su
 		ON uwod.Outcome = su.Outcome
 	WHERE Classification IN
 	(
